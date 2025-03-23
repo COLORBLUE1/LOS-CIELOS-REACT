@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router";
 import styled from "styled-components";
 
 const Navbar = styled.nav`
@@ -8,8 +7,7 @@ const Navbar = styled.nav`
   display: flex;
   justify-content: center;
   padding: 2rem;
-  position: static;
-  top: 0;
+  position: sticky;
 
   ul {
     display: flex;
@@ -19,10 +17,6 @@ const Navbar = styled.nav`
     justify-content: center;
 
     li {
-      background: #1f57b1;
-      padding: 0.5rem 1rem;
-      border-radius: 15px;
-      font-weight: bold;
       cursor: pointer;
       font-size: 1.1rem;
       font-weight: bold;
@@ -31,24 +25,8 @@ const Navbar = styled.nav`
       transition: color 0.3s;
 
       &:hover {
-        background: #419dff;
+        color: #f00;
       }
-    }
-  }
-
-  ul:last-child li {
-    background: #5594fa;
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-
-    a {
-      color: white;
-    }
-    &:hover {
-      background: #245891;
     }
   }
 `;
@@ -60,11 +38,6 @@ const AppBar = () => {
         <li>Inicio</li>
         <li>Sobre nosotros</li>
         <li>Servicios</li>
-      </ul>
-      <ul>
-        <li>
-          <Link to={"/"}>Ingresar</Link>
-        </li>
       </ul>
     </Navbar>
   );
