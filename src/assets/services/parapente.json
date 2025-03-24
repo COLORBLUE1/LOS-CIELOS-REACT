@@ -1,0 +1,29 @@
+{
+    "tipos_de_parapente": [
+      {
+        "id": 1,
+        "nombre": "Parapente de montaña",
+        "descripcion": "Este tipo de parapente es ideal para volar en montañas y lugares con fuertes vientos.",
+        "imagen": "https://antioquiadeaventura.com/wp-content/uploads/2024/11/P1120106-2-o-1024x682.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Parapente de cross-country",
+        "descripcion": "Diseñado para recorrer grandes distancias, ideal para los pilotos experimentados.",
+        "imagen": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/21/2a/48.jpg"
+      },
+      {
+        "id": 3,
+        "nombre": "Parapente acrobático",
+        "descripcion": "Parapente usado para realizar maniobras acrobáticas como giros y saltos.",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/David_Tejeiro_L%C3%B3pez_Parapente_Acrob%C3%A1tico.jpg/800px-David_Tejeiro_L%C3%B3pez_Parapente_Acrob%C3%A1tico.jpg"
+      },
+      {
+        "id": 4,
+        "nombre": "Parapente biplaza",
+        "descripcion": "Parapente para dos personas, ideal para disfrutar de la experiencia en pareja o en familia.",
+        "imagen": "https://cdn.getyourguide.com/img/tour/1e6fbe34ac80efa6c1a0314471d4fb9d6bfe5bf6c035efb1c875dc659e54f430.jpeg/146.jpg"
+      }
+    ]
+  }
+  
