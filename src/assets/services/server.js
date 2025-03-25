@@ -35,12 +35,12 @@ app.get('/', (req, res) => {
 });
 
 // Endpoint para obtener todos los tipos de parapente
-app.get('/api/parapente', (req, res) => {
-  res.json(parapenteData);
+app.get('/api/tipos-de-parapente', (req, res) => {
+  res.json(parapenteData.tipos_de_parapente);
 });
 
 // Endpoint para obtener un tipo de parapente por su ID
-app.get('/api/parapente/:id', (req, res) => {
+app.get('/api/tipos-de-parapente/:id', (req, res) => {
   const id = parseInt(req.params.id);
   const parapente = parapenteData.tipos_de_parapente.find(p => p.id === id);
   if (parapente) {
@@ -48,6 +48,47 @@ app.get('/api/parapente/:id', (req, res) => {
   } else {
     res.status(404).json({ error: 'Parapente no encontrado' });
   }
+});
+
+// Ruta para crear un nuevo tipo de parapente
+app.post('/api/tipos-de-parapente', (req, res) => {
+  const { nombre, descripcion, imagen } = req.body;
+  const nuevoId = parapenteData.tipos_de_parapente.length + 1;
+  const nuevoParapente = {
+    id: nuevoId,
+    nombre,
+    descripcion,
+    imagen
+  };
+  parapenteData.tipos_de_parapente.push(nuevoParapente);
+  res.status(201).json(nuevoParapente);
+});
+
+// Ruta para actualizar un tipo de parapente por su ID
+app.put('/api/tipos-de-parapente/:id', (req, res) => {
+  const { id } = req.params;
+  const { nombre, descripcion, imagen } = req.body;
+
+  let parapente = parapenteData.tipos_de_parapente.find(p => p.id === parseInt(id));
+  if (!parapente) {
+    return res.status(404).json({ message: 'Parapente no encontrado' });
+  }
+
+  parapente = { ...parapente, nombre, descripcion, imagen };
+  res.status(200).json(parapente);
+});
+
+// Ruta para eliminar un tipo de parapente
+app.delete('/api/tipos-de-parapente/:id', (req, res) => {
+  const { id } = req.params;
+  const index = parapenteData.tipos_de_parapente.findIndex(p => p.id === parseInt(id));
+
+  if (index !== -1) {
+    parapenteData.tipos_de_parapente.splice(index, 1);
+    return res.status(200).json({ message: 'Parapente eliminado con éxito' });
+  }
+
+  return res.status(404).json({ message: 'Parapente no encontrado' });
 });
 
 // Ruta para autenticación de usuarios
@@ -71,6 +112,56 @@ app.post('/api/login', (req, res) => {
     } else {
       return res.status(401).json({ message: 'Correo o contraseña incorrectos' });
     }
+  });
+});
+
+// consultas SQL 
+
+// Ruta para obtener todos los usuarios (Leer)
+app.get('/api/usuarios', (req, res) => {
+  const query = 'SELECT * FROM credenciales';
+  db.query(query, (err, result) => {
+    if (err) {
+      return res.status(500).json({ message: 'Error al obtener usuarios' });
+    }
+    res.status(200).json(result);
+  });
+});
+
+// Ruta para crear un nuevo usuario (Insertar)
+app.post('/api/usuarios', (req, res) => {
+  const { email, password, rol } = req.body;
+  const query = 'INSERT INTO credenciales (email, password, rol) VALUES (?, ?, ?)';
+  db.query(query, [email, password, rol], (err, result) => {
+    if (err) {
+      return res.status(500).json({ message: 'Error al crear usuario' });
+    }
+    res.status(201).json({ message: 'Usuario creado con éxito' });
+  });
+});
+
+// Ruta para actualizar un usuario (Actualizar)
+app.put('/api/usuarios/:id', (req, res) => {
+  const { email, password, rol } = req.body;
+  const { id } = req.params;
+  const query = 'UPDATE credenciales SET email = ?, password = ?, rol = ? WHERE id = ?';
+  db.query(query, [email, password, rol, id], (err, result) => {
+    if (err) {
+      return res.status(500).json({ message: 'Error al actualizar usuario' });
+    }
+    res.status(200).json({ message: 'Usuario actualizado con éxito' });
+  });
+});
+
+// Ruta para eliminar un usuario (Eliminar)
+app.delete('/api/usuarios/:id', (req, res) => {
+  const { id } = req.params;
+  const query = 'DELETE FROM credenciales WHERE id = ?';
+  db.query(query, [id], (err, result) => {
+    if (err) {
+      return res.status(500).json({ message: 'Error al eliminar usuario' });
+    }
+    res.status(200).json({ message: 'Usuario eliminado con éxito' });
   });
 });
 

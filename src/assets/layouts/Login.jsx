@@ -57,7 +57,10 @@ export const Img = styled.img`
   height: 250px;
   width: 250px;
   margin: auto;
-
+  background: #ffffff;
+  padding: 5px;
+    border-radius: 50%;
+    margin: 30px;
   //animacion de imagen
 
   animation: bounceIn;
@@ -98,7 +101,7 @@ export const Boton = styled.button`
   text-align: center;
   font-family: sans-serif;
   padding: 10px;
-  background-color: #144afc;
+  background-color: #2c438d;
   border: none;
   border-radius: 50px;
   color: black;
@@ -230,7 +233,7 @@ export function Login() {
       <Contenedorlogin>
         <Contenedoricon>
           <Img
-            src="https://png.pngtree.com/png-clipart/20240531/original/pngtree-colorful-skydiving-logo-for-the-app-vector-picture-image_15482772.png"
+            src="https://icones.pro/wp-content/uploads/2021/04/icone-de-nuage-bleu.png"
             alt="Logo de la app"
           />
           <Contenedorinput>
