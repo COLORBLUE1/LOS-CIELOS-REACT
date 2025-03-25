@@ -1,17 +1,17 @@
-import { useState } from "react";
+
 import { BrowserRouter, Route, Routes } from "react-router";
-import Landing from "../layouts/Landing";
-import Servicios from "../layouts/Servicios";
+import { Landing } from "../layouts/Landing";
+import { Servicios } from "../layouts/Servicios";
+import { Login } from "../layouts/Login";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/parapente/:id" element={<Servicios/>} />
+          <Route path="/parapente/:id" element={<Servicios />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>

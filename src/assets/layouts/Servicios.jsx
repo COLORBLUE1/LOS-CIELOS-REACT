@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
-
-const Servicios = () => {
+export function Servicios() {
   const { id } = useParams(); // Obtenemos el ID del tipo de parapente desde la URL
   const [parapente, setParapente] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -36,6 +35,4 @@ const Servicios = () => {
       {/* Aquí puedes agregar más detalles si los tienes */}
     </div>
   );
-};
-
-export default Servicios;
+}

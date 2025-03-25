@@ -35,7 +35,7 @@ const Sectionthree = styled.section`
 const Sectiontwe = styled.section`
   height: 100vh;
 `;
-const Landing = () => {
+export function Landing() {
   return (
     <>
       <SectionHeader>
@@ -52,6 +52,4 @@ const Landing = () => {
       <Footer />
     </>
   );
-};
-
-export default Landing;
+}

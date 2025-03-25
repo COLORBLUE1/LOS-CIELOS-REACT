@@ -78,7 +78,7 @@ const Header = () => {
           consequatur nobis iure aliquid asperiores optio non velit earum, quia
           vero?
         </p>
-        <Link to={"/"}>Ingresar</Link>
+        <Link to={"/Login"}>Ingresar</Link>
       </div>
       <img
         src="https://png.pngtree.com/png-clipart/20240515/original/pngtree-paragliding-extreme-sports-design-vintage-retro-png-image_15100243.png"
