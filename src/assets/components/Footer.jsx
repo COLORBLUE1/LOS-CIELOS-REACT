@@ -48,18 +48,18 @@ const SectionFooter = styled.footer`
 const Footer = () => {
   return (
     <SectionFooter className="footer">
-      <div class="footer-content">
+      <div className="footer-content">
         <nav>
-          <h6 class="footer-heading">Servicios</h6>
-          <a class="footer-link">vaijes</a>
+          <h6 className="footer-heading">Servicios</h6>
+          <a className="footer-link">vaijes</a>
         </nav>
         <nav>
-          <h6 class="footer-heading">Compañia</h6>
-          <a class="footer-link">Legal</a>
+          <h6 className="footer-heading">Compañia</h6>
+          <a className="footer-link">Legal</a>
         </nav>
         <nav>
-          <h6 class="footer-heading">Personaje</h6>
-          <a class="footer-link">¿Quien?</a>
+          <h6 className="footer-heading">Personaje</h6>
+          <a className="footer-link">¿Quien?</a>
         </nav>
       </div>
     </SectionFooter>

@@ -2,28 +2,25 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router";
+import { Link } from "react-router"; // Asegúrate de usar 'react-router-dom' en vez de 'react-router'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick"; // Se añadió la importación correcta del carrusel
-import CircularProgress from '@mui/material/CircularProgress';
+import Slider from "react-slick";
 
-
+// Styled Components
 const Header = styled.section`
   background: url("https://www.valthorens.com/app/uploads/iris-images/5867/220811-seek-peak-l.brochot-ot-val-thorens-77-1920x1080-f50_50.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 450px;
-    width: 60%;
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    border-radius: 20px;
-
-
-  
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 60%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
 `;
+
 const SectionService = styled.section`
   padding: 100px 20px;
   text-align: center;
@@ -40,7 +37,7 @@ const CarouselWrapper = styled.div`
   margin: 0 auto;
   position: absolute;
   top: 45%;
-  
+
   .slick-slide {
     display: flex;
     justify-content: center;
@@ -49,15 +46,15 @@ const CarouselWrapper = styled.div`
 `;
 
 const Card = styled.div`
- box-shadow: 0 0 4px 4px rgb(0 0 0 / 25%);
+  box-shadow: 0 0 4px 4px rgb(0 0 0 / 25%);
   background-color: #fffdfd;
   border-radius: 10px;
   width: 300px !important;
   height: 350px !important;
   padding: 20px;
   margin: 10px;
-
   text-align: center;
+  z-index: 99;
 
   img {
     width: 100%;
@@ -93,25 +90,47 @@ const Card = styled.div`
   }
 `;
 
-const Servicios = () => {
-  const [parapenteData, setParapenteData] = useState([]);
+const SectionMain = styled.header`
+  background: url("https://imagenes.eltiempo.com/files/image_1200_600/uploads/2024/03/05/65e7754a37250.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  padding: 2rem;
+
+  div {
+    backdrop-filter: blur(3px);
+    height: 70%;
+    width: 100%;
+    color: #000000;
+  }
+`;
+
+// Component
+export function ParapenteCards() {
+  const [tiposParapente, setTiposParapente] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [parapenteData, setParapenteData] = useState([]);
 
   useEffect(() => {
+    // Inicializar AOS para animaciones
     AOS.init();
 
-    fetch("http://localhost:3000/api/parapente")
-      .then((response) => response.json())
-      .then((data) => {
-        setParapenteData(data.tipos_de_parapente || []);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error al cargar los datos:", error);
-        setLoading(false);
-      });
+    // Obtener tipos de parapente
+    fetchTiposParapente();
+
+
   }, []);
 
+  // Obtener todos los tipos de parapente
+  const fetchTiposParapente = async () => {
+    const response = await fetch("http://localhost:3000/api/tipos-de-parapente");
+    const data = await response.json();
+    setTiposParapente(data);
+  };
+
+  // Configuración del carrusel
   const settings = {
     dots: true,
     infinite: true,
@@ -139,26 +158,20 @@ const Servicios = () => {
       <Header>
         <h2 data-aos="fade-up">Servicios</h2>
         <CarouselWrapper>
-          {loading ? (
-            <CircularProgress />
-          ) : (
-            <Slider {...settings}>
-              {parapenteData.map((parapente) => (
-                <Card data-aos="zoom-in" key={parapente.id}>
-                  <img src={parapente.imagen} alt={parapente.nombre} />
-                  <h3>{parapente.nombre}</h3>
-                  <p>{parapente.descripcion}</p>
-                  <Link to={`/parapente/${parapente.id}`} className="btn">
-                    Ver más
-                  </Link>
-                </Card>
-              ))}
-            </Slider>
-          )}
+          <Slider {...settings}>
+            {tiposParapente.map((parapente) => (
+              <Card data-aos="zoom-in" key={parapente.id}>
+                <img src={parapente.imagen} alt={parapente.nombre} />
+                <h3>{parapente.nombre}</h3>
+                <p>{parapente.descripcion}</p>
+                <Link to={`/parapente/${parapente.id}`} className="btn">
+                  Ver más
+                </Link>
+              </Card>
+            ))}
+          </Slider>
         </CarouselWrapper>
       </Header>
     </SectionService>
   );
-};
-
-export default Servicios;
+}

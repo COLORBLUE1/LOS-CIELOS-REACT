@@ -200,7 +200,7 @@ export function Login() {
         toast.success("¡Inicio de sesión exitoso!");
 
         // Redirigir dependiendo del rol
-        if (rol === "administrador") {
+        if (rol === "admin") {
           navigate("/admin-dashboard"); // Redirige al dashboard del administrador
         } else if (rol === "instructor") {
           navigate("/instructor-dashboard"); // Redirige al dashboard del instructor

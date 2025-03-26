@@ -71,12 +71,9 @@ const Header = () => {
   return (
     <Headecontent>
       <div className="header-content">
-        <h2>Sientete seguro volando con un instructor</h2>
+        <h2>Siéntete seguro volando con un instructor</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quos
-          sunt! Fugiat eum molestias enim reprehenderit voluptatibus autem dicta
-          consequatur nobis iure aliquid asperiores optio non velit earum, quia
-          vero?
+          El parapente es un deporte extremo que consiste en volar en un planeador ligero, impulsado por el viento y sin estructura rígida. Es una actividad turística que permite disfrutar de la sensación de volar.
         </p>
         <Link to={"/Login"}>Ingresar</Link>
       </div>

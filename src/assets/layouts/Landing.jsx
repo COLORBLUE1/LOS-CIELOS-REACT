@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import AppBar from "../components/AppBar";
 import Header from "../components/Header";
-import Servicios from "../components/ServiciosLayout";
 import Footer from "../components/Footer";
+import { ParapenteCards } from "../components/ServiciosCard";
+
 
 const SectionHeader = styled.header`
   background: url("https://res.cloudinary.com/manawa/image/private/f_auto,c_limit,w_3840,q_auto/bbf560ab326f0ed02d9908084b152283");
@@ -11,7 +12,7 @@ const SectionHeader = styled.header`
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  height: 80vh;
+  height: 90vh;
 
   div {
     backdrop-filter: blur(3px);
@@ -33,19 +34,19 @@ const Sectionthree = styled.section`
   background-position: center;
 `;
 const Sectiontwe = styled.section`
-  height: 100vh;
+  height: 150vh;
 `;
 export function Landing() {
   return (
     <>
       <SectionHeader>
         <div>
-          <AppBar />
+          {/* <AppBar /> */}
           <Header />
         </div>
       </SectionHeader>
       <Sectiontwe>
-        <Servicios />
+        <ParapenteCards />
       </Sectiontwe>
       <Sectionthree />
 

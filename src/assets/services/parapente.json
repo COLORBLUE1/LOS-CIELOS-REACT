@@ -1,29 +1,39 @@
 {
-    "tipos_de_parapente": [
-      {
-        "id": 1,
-        "nombre": "Parapente de montaña",
-        "descripcion": "Este tipo de parapente es ideal para volar en montañas y lugares con fuertes vientos.",
-        "imagen": "https://antioquiadeaventura.com/wp-content/uploads/2024/11/P1120106-2-o-1024x682.jpg"
-      },
-      {
-        "id": 2,
-        "nombre": "Parapente de cross-country",
-        "descripcion": "Diseñado para recorrer grandes distancias, ideal para los pilotos experimentados.",
-        "imagen": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/21/2a/48.jpg"
-      },
-      {
-        "id": 3,
-        "nombre": "Parapente acrobático",
-        "descripcion": "Parapente usado para realizar maniobras acrobáticas como giros y saltos.",
-        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/David_Tejeiro_L%C3%B3pez_Parapente_Acrob%C3%A1tico.jpg/800px-David_Tejeiro_L%C3%B3pez_Parapente_Acrob%C3%A1tico.jpg"
-      },
-      {
-        "id": 4,
-        "nombre": "Parapente biplaza",
-        "descripcion": "Parapente para dos personas, ideal para disfrutar de la experiencia en pareja o en familia.",
-        "imagen": "https://cdn.getyourguide.com/img/tour/1e6fbe34ac80efa6c1a0314471d4fb9d6bfe5bf6c035efb1c875dc659e54f430.jpeg/146.jpg"
-      }
-    ]
-  }
-  
+  "tipos_de_parapente": [
+    {
+      "id": 1,
+      "nombre": "Parapente de montaña",
+      "descripcion": "Este tipo de parapente es ideal para volar en montañas y lugares con fuertes vientos.",
+      "imagen": "https://antioquiadeaventura.com/wp-content/uploads/2024/11/P1120106-2-o-1024x682.jpg",
+      "descripcionlarga": "El parapente de montaña está diseñado específicamente para condiciones de viento fuerte y turbulento, típicas en terrenos montañosos. Este tipo de parapente permite a los pilotos disfrutar de vuelos largos y emocionantes, aprovechando las corrientes térmicas y las dinámicas de las montañas. Los parapentes de montaña suelen ser más robustos y resistentes que los modelos de otros tipos debido a las exigencias del terreno.\n\nLos pilotos de parapente de montaña deben tener un buen conocimiento del comportamiento del viento y de cómo leer las condiciones atmosféricas, ya que los vientos pueden cambiar rápidamente en las zonas montañosas. La seguridad es una prioridad, por lo que es fundamental contar con equipos de alta calidad, como cascos y paracaídas de emergencia, y realizar vuelos en condiciones meteorológicas favorables.\n\nA menudo, los vuelos en parapente de montaña permiten disfrutar de vistas impresionantes y espectaculares. Estos vuelos pueden durar horas, ya que el piloto puede aprovechar las térmicas ascendentes para ganar altitud y planear sin necesidad de realizar un aterrizaje cercano.\n\nEl parapente de montaña se practica comúnmente en regiones montañosas, como los Alpes, los Andes o zonas cercanas a volcanes activos, donde las condiciones de viento y las alturas ofrecen un escenario perfecto para este tipo de vuelo."
+    },
+    {
+      "id": 2,
+      "nombre": "Parapente de cross-country",
+      "descripcion": "Diseñado para recorrer grandes distancias, ideal para los pilotos experimentados.",
+      "imagen": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/21/2a/48.jpg",
+      "descripcionlarga": "El parapente de cross-country está diseñado para vuelos largos, donde el objetivo es recorrer distancias significativas aprovechando las corrientes de aire ascendentes y las térmicas. Este tipo de parapente es adecuado para pilotos experimentados que buscan explorar grandes áreas y desafiar sus habilidades de navegación aérea. A diferencia de otros tipos de parapente, el cross-country pone énfasis en la eficiencia y en la optimización del vuelo.\n\nEl parapente de cross-country tiene una estructura más ligera y aerodinámica que permite mantener un vuelo estable durante largas horas. Los pilotos pueden volar a través de diferentes tipos de terreno, desde montañas hasta llanuras, utilizando las corrientes de aire ascendentes para ganar altura y planear largas distancias sin necesidad de aterrizar. La clave en este tipo de vuelo es la capacidad de planear y calcular rutas eficientes entre térmicas y zonas de ascenso.\n\nEste tipo de vuelo exige un alto nivel de habilidad y experiencia. Los pilotos de cross-country deben ser capaces de leer el clima, las condiciones del viento y las térmicas, lo que implica tener un buen conocimiento del entorno y una buena planificación antes de cada vuelo. Además, se debe tener en cuenta la seguridad, ya que estos vuelos pueden durar varias horas y cubrir grandes distancias.\n\nLas competiciones de parapente de cross-country son populares entre los pilotos avanzados, y se celebran en varias partes del mundo. Estos eventos consisten en recorrer una ruta determinada en el menor tiempo posible, lo que exige tanto habilidades de vuelo como conocimientos de navegación."
+    },
+    {
+      "id": 3,
+      "nombre": "Parapente acrobático",
+      "descripcion": "Parapente usado para realizar maniobras acrobáticas como giros y saltos.",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/David_Tejeiro_L%C3%B3pez_Parapente_Acrob%C3%A1tico.jpg/800px-David_Tejeiro_L%C3%B3pez_Parapente_Acrob%C3%A1tico.jpg",
+      "descripcionlarga": "El parapente acrobático es una modalidad de vuelo en la que los pilotos realizan maniobras espectaculares en el aire, tales como giros, volteretas, y saltos. Estos vuelos requieren una gran habilidad técnica y una excelente capacidad para controlar el parapente en situaciones extremas. Los parapentes utilizados en esta modalidad son más ligeros y tienen una mayor maniobrabilidad para permitir al piloto ejecutar figuras complejas.\n\nLa acrobacia en parapente incluye una serie de maniobras como el wingover, el loop (bucle), y el spin, entre otras. Cada maniobra requiere precisión y destreza, y los pilotos deben tener un control total sobre su equipo en todo momento. Estas maniobras no solo son impresionantes para los espectadores, sino que también son desafiantes para los propios pilotos, quienes deben tener una gran capacidad de reacción.\n\nAunque el parapente acrobático es emocionante y visualmente impresionante, también conlleva riesgos mayores que otras modalidades. Es necesario practicar en condiciones controladas y, preferentemente, bajo la supervisión de instructores experimentados. La seguridad en este tipo de vuelo es crucial, por lo que el uso de equipos de alta calidad y procedimientos de seguridad rigurosos es esencial.\n\nEste tipo de vuelo se ha vuelto cada vez más popular en los últimos años, y las competiciones de parapente acrobático atraen a pilotos de todo el mundo. Las competiciones consisten en una serie de maniobras que los pilotos deben realizar de la manera más precisa y estilística posible, y los jueces otorgan puntos en función de la habilidad y la ejecución de cada figura."
+    },
+    {
+      "id": 4,
+      "nombre": "Parapente biplaza",
+      "descripcion": "Parapente para dos personas, ideal para disfrutar de la experiencia en pareja o en familia.",
+      "imagen": "https://cdn.getyourguide.com/img/tour/1e6fbe34ac80efa6c1a0314471d4fb9d6bfe5bf6c035efb1c875dc659e54f430.jpeg/146.jpg",
+      "descripcionlarga": "El parapente biplaza es un tipo de vuelo en el que dos personas comparten el mismo parapente. Este tipo de vuelo es ideal para quienes desean experimentar la sensación de volar sin la necesidad de tener experiencia previa. En el parapente biplaza, uno de los ocupantes es el piloto experimentado, y el otro es el pasajero, que puede disfrutar del vuelo como una experiencia única y emocionante.\n\nEl parapente biplaza se utiliza principalmente para vuelos recreativos, y es perfecto para aquellos que desean conocer el mundo del parapente sin tener que aprender a volar por su cuenta. Los pasajeros pueden disfrutar de vistas panorámicas espectaculares mientras el piloto maneja el parapente y asegura la seguridad de ambos durante el vuelo.\n\nEste tipo de vuelo también es popular para realizar vuelos de introducción al parapente, así como para turistas que desean realizar un vuelo en lugares pintorescos. Las zonas más comunes para los vuelos en parapente biplaza incluyen montañas, costas y áreas cercanas a lagos o ríos. Los vuelos pueden durar desde unos pocos minutos hasta una hora, dependiendo de las condiciones climáticas y la ubicación.\n\nEl parapente biplaza es una excelente opción para familias, parejas o amigos que buscan una aventura juntos. Los pasajeros no necesitan tener habilidades especiales, ya que el piloto se encarga de toda la operación, pero la experiencia de volar es algo que difícilmente se olvida."
+    },
+    {
+      "id": 5,
+      "nombre": "Parapente de velocidad",
+      "descripcion": "Diseñado para alcanzar altas velocidades, ideal para competiciones y pilotos avanzados.",
+      "imagen": "https://www.escuelaavesdesalento.com/wp-content/uploads/2023/11/VID_20221012_002149_00_018_2023-11-19_21-14-59_capturadepantalla.jpg",
+      "descripcionlarga": "El parapente de velocidad es una modalidad de parapente diseñada para aquellos pilotos que buscan alcanzar altas velocidades durante el vuelo. Estos parapentes tienen un diseño más estrecho y aerodinámico que les permite cortar el viento con mayor eficiencia y aumentar la velocidad de vuelo. Los parapentes de velocidad son especialmente populares en competiciones de vuelo acrobático y de distancia, donde la rapidez es esencial.\n\nEl diseño de estos parapentes incluye líneas más finas y una mayor rigidez en las alas, lo que proporciona un mayor control y estabilidad a altas velocidades. Los pilotos deben ser altamente capacitados, ya que volar a gran velocidad puede ser más desafiante y riesgoso. Es fundamental que los pilotos de parapente de velocidad comprendan perfectamente cómo manejar las variaciones del viento y la resistencia del aire.\n\nLas competiciones de parapente de velocidad ponen a prueba las habilidades del piloto en carreras de velocidad o desafíos de descenso rápido. Estos eventos requieren una excelente sincronización y destreza para aprovechar las corrientes de aire y las térmicas, maximizando la velocidad sin comprometer la seguridad.\n\nAdemás de las competiciones, algunos pilotos practican vuelos de velocidad en paisajes abiertos, buscando nuevos récords de velocidad o simplemente disfrutando de la emoción que ofrece este tipo de vuelo. La seguridad es clave, y es común utilizar paracaídas de reserva y otros equipos especializados para minimizar los riesgos."
+    }
+  ]
+}
